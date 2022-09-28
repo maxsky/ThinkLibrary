@@ -1,26 +1,35 @@
 {
-  "type": "library",
-  "name": "zoujingli/think-library",
-  "license": "MIT",
-  "homepage": "http://framework.thinkadmin.top",
-  "description": "ThinkPHP Basic Development Library",
-  "require": {
-    "php": ">=5.5",
-    "ext-gd": "*",
-    "ext-json": "*",
-    "ext-curl": "*",
-    "ext-iconv": "*",
-    "ext-openssl": "*",
-    "qiniu/php-sdk": "^7.2",
-    "topthink/framework": "5.1.*",
-    "aliyuncs/oss-sdk-php": "^2.3"
-  },
-  "autoload": {
-    "files": [
-      "src/common.php"
-    ],
-    "psr-4": {
-      "library\\": "src"
-    }
-  }
+    "type": "library",
+    "name": "maxsky/think-library",
+    "license": "MIT",
+    "homepage": "https://thinkadmin.top/",
+    "description": "ThinkPHP Basic Development Library",
+    "require": {
+        "php": "^5.6|^7.1",
+        "ext-gd": "*",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "ext-iconv": "*",
+        "ext-openssl": "*",
+        "qiniu/php-sdk": "^7.7",
+        "aliyuncs/oss-sdk-php": "^2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "library\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "topthink/think-installer": false
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
